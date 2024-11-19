@@ -171,41 +171,43 @@ class _UserScreenState extends State<UserScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              widget.userModel!.name!,
-                              style: GoogleFonts.inter(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: const Color(0xFF1E1E2D)),
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  'User ',
-                                  style: GoogleFonts.inter(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500,
-                                      color: const Color(0xFF434557)),
-                                ),
-                                Center(
-                                    child: Image.asset(
-                                  "lib/assets/images/Ellipse.png",
-                                  width: 5,
-                                  height: 5,
-                                )),
-                                Text(
-                                  " ${widget.userModel!.email!}",
-                                  style: GoogleFonts.inter(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: const Color(0xFF2A2D3D)),
-                                ),
-                              ],
-                            ),
-                          ],
+                        Flexible(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.userModel!.name!,
+                                style: GoogleFonts.inter(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF1E1E2D)),
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'User ',
+                                    style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: const Color(0xFF434557)),
+                                  ),
+                                  Center(
+                                      child: Image.asset(
+                                    "lib/assets/images/Ellipse.png",
+                                    width: 5,
+                                    height: 5,
+                                  )),
+                                  Text(
+                                    " ${widget.userModel!.email!}",
+                                    style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        color: const Color(0xFF2A2D3D)),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

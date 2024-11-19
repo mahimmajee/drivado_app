@@ -171,26 +171,28 @@ class _CompanyScreenState extends State<CompanyScreen> {
                           ),
                         ),
                         const SizedBox(width: 16),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              widget.companyModel!.companyName!,
-                              style: GoogleFonts.inter(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0xFF1E1E2D),
+                        Flexible(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.companyModel!.companyName!,
+                                style: GoogleFonts.inter(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: const Color(0xFF1E1E2D),
+                                ),
+                                overflow: TextOverflow.visible,
                               ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            Text(
-                              widget.companyModel!.email!,
-                              style: GoogleFonts.inter(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
-                                  color: const Color(0xFF2A2D3D)),
-                            ),
-                          ],
+                              Text(
+                                widget.companyModel!.email!,
+                                style: GoogleFonts.inter(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color(0xFF2A2D3D)),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
