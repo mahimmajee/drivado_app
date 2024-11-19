@@ -33,8 +33,9 @@ class CompanyUserViewModel with ChangeNotifier {
     notifyListeners();
     Future.delayed(const Duration(seconds: 2), () {
       int transferCount = 5;
-      int itemsToTransfer =
-          userList.length >= currentUserIndex ? transferCount : userList.length;
+      int itemsToTransfer = userList.length >= currentUserIndex + transferCount
+          ? transferCount
+          : userList.length - currentUserIndex;
       if (currentUserIndex < userList.length) {
         onScreenUserList.addAll(userList.sublist(
             currentUserIndex, currentUserIndex + itemsToTransfer));
@@ -63,9 +64,10 @@ class CompanyUserViewModel with ChangeNotifier {
     notifyListeners();
     Future.delayed(const Duration(seconds: 2), () {
       int transferCount = 5;
-      int itemsToTransfer = companyList.length >= currentCompanyIndex
-          ? transferCount
-          : companyList.length;
+      int itemsToTransfer =
+          companyList.length >= currentCompanyIndex + transferCount
+              ? transferCount
+              : companyList.length - currentCompanyIndex;
       if (currentCompanyIndex < companyList.length) {
         for (int i = currentCompanyIndex;
             i < currentCompanyIndex + itemsToTransfer;
